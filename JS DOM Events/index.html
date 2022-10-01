@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+
+<style>
+    .newComment {
+        border: 2px solid black;
+        padding: 10px;
+        margin-top: 1rem;
+    }
+
+    .delete{
+        background: red;
+        color:whitesmoke;
+        border: none;
+        outline: none;
+        padding: .5rem .8rem;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h2>Make a Comment</h2>
+    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comment"></textarea> <br>
+    <button id="post">Post Your Comment</button>
+
+    <div class="commentBox">
+        <!-- <div class="newComment">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eum perspiciatis nemo possimus consectetur, repudiandae sint, molestias quasi necessitatibus voluptate eaque tempora esse architecto sit dolores amet. Facere, quam distinctio!</p>
+            <button class="btn">Delete Comment</button>
+        </div> -->
+    </div>
+
+    <script>
+        const comment = document.getElementById("comment")
+        const post = document.getElementById("post")
+        const commentBox = document.querySelector(".commentBox")
+
+        // add a comment
+        post.addEventListener("click", function () {
+
+            // console.log("it's working")
+            if (comment.value === "") {
+                alert("type something")
+            } else {
+                // creating a comment box
+                let newComment = document.createElement("div")
+                newComment.classList.add("newComment")
+                // newComment.innerHTML = "this is a new comment"
+                commentBox.appendChild(newComment);
+
+                //creating a P tag
+                let newElement = document.createElement("p")
+                newElement.innerText = comment.value;
+                newComment.appendChild(newElement)
+
+                // making the field empty
+                comment.value = "";
+
+                // creating a delete button
+                let deleteBtn = document.createElement("button")
+                deleteBtn.innerText = "Delete Comment"
+                deleteBtn.classList.add("delete")
+                newComment.appendChild(deleteBtn)
+
+                let deleteComment = document.querySelectorAll('.delete')
+
+                // console.log(deleteComment)
+
+                for (const btn of deleteComment){
+                    // console.log(btn)
+                    btn.addEventListener("click", function(event){
+                    event.target.parentElement.remove()
+                })
+                }
+                
+                
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

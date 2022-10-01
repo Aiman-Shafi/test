@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center mt-5">What are you Looking for?</h2>
+        <div class="form-floating mb-3 w-50 m-auto mt-5">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Search for a Word...</label>
+        </div>
+        <div>
+            
+        </div>
+        <div class="message">
+            <p class="searching text-center pt-3"></p>
+        </div>
+        <div class="all-details">
+            <div class="w-50 m-auto">
+                <button class="btn btn-success"><i class="bi bi-volume-up"></i> Play</button>
+            </div>
+            <div class="w-50 m-auto mt-5">
+                <div class="word">
+                    <h3 class="search-word"></h3>
+                    <p class="partOfSpeech lead"></p>
+                </div>
+            </div>
+            <hr class="w-50 m-auto">
+            <div class="details w-50 m-auto">
+                <div class="meaning pt-3">
+                    <h4>Meaning</h4>
+                    <p class="word-meaning"></p>
+                </div>
+                <div class="example pt-3">
+                    <h4>Example</h4>
+                    <p class="word-examples"></p>
+                </div>
+                <div class="synonyms pt-3">
+                    <h4>Synonyms</h4>
+                    <p class="synonyms-words"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>

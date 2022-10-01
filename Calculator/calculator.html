@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="input-number">
+      <input type="number" id="num-one" placeholder="num1" />
+      <input type="number" id="num-two" placeholder="num1" />
+    </div>
+    <br />
+
+    <button onclick="add()">ADD</button>
+    <button onclick="multiply()">MULTIPLY</button>
+    <button onclick="substract()">SUBSTRACT</button>
+    <button onclick="division()">DIVIDE</button>
+
+    <div>
+      <h2>
+        <span id="operation">Sum</span> of two numbers<span id="value"> 0</span>
+      </h2>
+    </div>
+
+    <script>
+      let numberOne = document.getElementById("num-one");
+      let numberTwo = document.getElementById("num-two");
+
+      let value = document.getElementById("value");
+      let operation = document.getElementById("operation");
+
+      function add() {
+        if (numberOne.value && numberTwo.value) {
+          let add = parseInt(numberOne.value) + parseInt(numberTwo.value);
+          value.innerHTML = ": " + add;
+          operation.innerHTML = "Addition";
+        } else {
+          alert("Enter Value!");
+        }
+      }
+
+      function subtract() {
+        let add = numberOne - numberTwo;
+        value.innerHTML = ": " + add;
+        operation.innerHTML = "Subtraction";
+      }
+
+      function division() {
+        let add = numberOne / numberTwo;
+        value.innerHTML = ": " + add;
+        operation.innerHTML = "Division";
+      }
+
+      function multiply() {
+        let add = numberOne * numberTwo;
+        value.innerHTML = ": " + add;
+        operation.innerHTML = "Multiply";
+      }
+    </script>
+  </body>
+</html>

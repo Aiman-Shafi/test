@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- <h2>Let's learn JS DOM</h2>
+    <h1 id="text">Hello</h1>
+    <h1>We are learning JS DOM</h1> -->
+    <div class="post">
+        <h2 class="post-title">Hello World</h2>
+        <h4 class="author">James Bond</h4>
+        <p class="post-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur dolorem suscipit ad. Aut praesentium ipsum quasi accusamus qui, autem deleniti recusandae laborum quas.</p>
+    </div>
+
+    <div class="post">
+        <h2 class="post-title">My World</h2>
+        <h4 class="author">James Bond</h4>
+        <p class="post-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur dolorem suscipit ad. Aut praesentium ipsum quasi accusamus qui, autem deleniti recusandae laborum quas.</p>
+    </div>
+
+    <div class="post">
+        <h2 class="post-title">Your World</h2>
+        <h4 class="author">James Bond</h4>
+        <p class="post-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur dolorem suscipit ad. Aut praesentium ipsum quasi accusamus qui, autem deleniti recusandae laborum quas.</p>
+    </div>
+    
+
+    <script>
+        const postTitle =  document.querySelectorAll(".post-title")
+        const author =  document.getElementsByClassName("author")
+        const post =  document.getElementsByClassName("post")
+        const newAuthor = document.getElementsByTagName("h2")
+
+
+        for (let i = 0; i < newAuthor.length; i++){
+            newAuthor[i].style.backgroundColor = "violet"   
+        }
+
+        // postTitle.innerHTML = "hrllo"
+        console.log(postTitle)
+
+        for (let i = 0; i < postTitle.length; i++ ){
+            // console.log(postTitle[i])
+            postTitle[0].style.color = "green"
+        }
+
+        for (let i = 0; i < post.length; i++ ){
+            post[2].style.backgroundColor = "pink"
+        }
+
+        for (let i = 0; i < author.length; i++ ){
+            console.log(author[i])
+            author[i].innerHTML = "New Writer " + (i + 1) 
+            author[i].style.backgroundColor = "blue";
+            author[i].style.color = "white";
+        }
+        
+        // console.log(document.getElementsByTagName("h1")[1])
+        // document.getElementsByTagName("h1")[1].innerHTML = "My name is AIman"
+        // let text = document.getElementById("text")
+        // console.log(text)
+        // // text.innerHTML = "jkono kichu"
+        // // text.textContent = "jkono kichu ekta"
+        // text.innerText = "jkono kichu ekta 2"
+        // text.style.color = "red"
+        // text.style.backgroundColor = "pink"
+    </script>
+
+   
+</body>
+</html>

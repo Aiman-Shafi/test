@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-4 text-center p-5">See Current Weather...</h1>
+        <div class="input-group mb-3 w-50 m-auto">
+            <input type="text" class="form-control" placeholder="Search.. ex: Dhaka" id="searchInput">
+            <span class="input-group-text btn btn-success" id="search-btn">Search</span>
+        </div>
+
+        <div class="weather-status text-center">
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" id="weather-icon" alt="">
+            <h2 id="city">Dhaka</h2>
+            <h3><span id="temp">32.02</span><span>&deg;C</span></h3>
+            <h4 > <span id="condition">Clear</span>, <span id="description"> Clear Sky</span></h4>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

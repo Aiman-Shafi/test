@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Number of Count</h1>
+        <h1 id="count">0</h1>
+        <div class="all-btn">
+            <button class="btn-increment">Increment</button>
+            <button class="btn-decrement">Decrement</button>
+            <button class="btn-save" onclick="saveCount()">Save Count</button>
+        </div>
+        <div class="entries">
+            <p>All count values</p>
+            <p class="all-entries"></p>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        let counter = document.getElementById("count")
+        console.log(counter)
+
+        function increment() {
+            // count = count + 1;
+            count += 1
+            counter.innerHTML = count;
+        }
+
+        function decrement() {
+            if (count > 0) {
+                count -= 1
+                counter.innerHTML = count
+            }
+        }
+
+        function saveCount() {
+            document.querySelector(".all-entries").innerHTML += count + " , "
+            count = 0
+            counter.innerHTML = count
+        }
+
+        let btnIncrement = document.querySelector(".btn-increment")
+        let btnDecrement = document.querySelector(".btn-decrement")
+        // console.log(btnIncrement)
+
+        btnIncrement.addEventListener("click", increment)
+        btnDecrement.addEventListener("click", decrement)
+
+
+    </script>
+</body>
+
+</html>

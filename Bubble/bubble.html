@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>List of items</h2>
+      <ul id="items">
+        <li class="list">Lorem4asdasdsa</li>
+        <li class="list">Lorem ipsum dolor sit amet.</li>
+        <li class="list">Lorem ipsum dolor sit amet consectetur.</li>
+        <li class="list">
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </li>
+        <li class="list">
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </li>
+        <li class="list">
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </li>
+      </ul>
+      <button id="btn">Click the Button</button>
+    </div>
+
+    Thank you for requesting our Ebook. Here is your link:
+    <a
+      href="https://healinghandstherapycenter.com/wp-content/uploads/2022/05/Musicians-Ebook2.pdf"
+      >DOWNLOAD NOW</a
+    >
+    <br />
+    Heather Mogielnicki, BFA, BS, OT/L, CHT
+    <br />
+    Healing Hands Therapy Center, LLC
+
+    <script>
+      document
+        .querySelector(".container")
+        .addEventListener("click", function () {
+          console.log("section is clicked");
+        });
+
+      // document.querySelector("#items").addEventListener("click", (event)=> {
+      //     // console.log("ul is clicked")
+      //     event.stopPropagation()
+      // }
+      // )
+
+      let lists = document.querySelectorAll(".list");
+
+      console.log(lists);
+
+      document.querySelector("#btn").addEventListener("click", function () {
+        document.querySelector("#items").innerHTML += ` 
+                <li class="list">Helloooo</li>
+            `;
+      });
+
+      // for (const list of lists){
+      //     // console.log(list)
+      //     list.addEventListener("click", (event)=> {
+      //         // console.log("list clicked")
+      //         // event.stopPropagation()
+      //         console.log(event.target.remove())
+      //     })
+      // }
+
+      document
+        .querySelector("#items")
+        .addEventListener("click", function (event) {
+          console.log(event.target.parentNode.removeChild(event.target));
+        });
+
+      //   // local storage
+      //   let allItems = ["moham", "tanvir", "samir"];
+
+      //   localStorage.setItem("name", JSON.stringify(allItems));
+      //   localStorage.setItem("age", "34");
+      //   localStorage.setItem("class", "new");
+
+      //   let item = JSON.parse(localStorage.getItem("name"));
+
+      // sessionStorage.setItem("name", JSON.stringify(allItems))
+    </script>
+  </body>
+</html>
